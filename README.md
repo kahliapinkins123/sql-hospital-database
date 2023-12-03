@@ -1,3 +1,4 @@
+<div id="top"></div>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -20,20 +21,20 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      About The Project
+      <a href="#about-the-project">About The Project</a>
       <ul>
-        <li>Built With</li>
+        <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>Exploring the Data</li>
-    <li>Contact Me</a></li>
+    <li><a href="#exploring">Exploring the Data</a></li>
+    <li><a href="#contact">Contact Me</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-
+<div id="about-the-project"></div>
 ## About The Project
 
 
@@ -198,6 +199,7 @@ This is a Hospital Database built with SQL. It contains several tables with data
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<div id="built-with"></div>
 
 ### Built With
 
@@ -208,6 +210,8 @@ This is a Hospital Database built with SQL. It contains several tables with data
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- QUERY EXAMPLES -->
+<div id="exploring"></div>
+
 ## Exploring the Data
 
 After creating the database, I wanted to explore the data further to identify trends and extract important information. I did this using SQL queries. Some of the questions that are explored in this project are listed below : 
@@ -229,6 +233,8 @@ Questions like this help us to get a better understanding of the data that we're
 
 
 <!-- CONTACT -->
+<div id="contact"></div>
+
 ## Contact Me
 <ul>
   <li><a href="https://www.linkedin.com/in/kahlia-pinkins-616599207/">LinkedIn</a></li>
