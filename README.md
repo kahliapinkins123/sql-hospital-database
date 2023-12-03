@@ -224,13 +224,14 @@ After creating the database, I wanted to explore the data further to identify tr
         <li>What is the average salary of male nurses vs. the average salary of female nurse?</li>
         <li>What is the average age of patients in each department?</li>
         <li>Which patients under 18 have the flu?</li>
-        <li>How many milligrams of Ciprofloxacin will be admistered?</li>
+        <li>How many milligrams of Ciprofloxacin total will be admistered in a day?</li>
         <li>Which departments have the highest average bill?</li>
         <li>Which nurses are treating patients with pneumonia?</li>
         <li>Are there more females or males in Intensive Care?</li>
-        <li>What disease does the oldest patient in the hospital have?</li>
+        <li>Which disease does the eldest patient in the hospital have?</li>
     </ol>
-Questions like this help us to get a better understanding of the data that we're working with and allow us identify trends and patterns for further analysis or to influence future decisions.
+    
+<p>Questions like these helped me to get a better understanding of the hospital data that I'm working with and allowed me to identify trends and patterns for further analysis or to influence future decisions in the hospital.</p>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
