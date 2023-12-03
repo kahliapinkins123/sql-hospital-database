@@ -35,6 +35,7 @@
 
 <!-- ABOUT THE PROJECT -->
 <div id="about-the-project"></div>
+
 ## About The Project
 
 
@@ -231,6 +232,7 @@ After creating the database, I wanted to explore the data further to identify tr
     </ol>
 Questions like this help us to get a better understanding of the data that we're working with and allow us identify trends and patterns for further analysis or to influence future decisions.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
 <div id="contact"></div>
@@ -241,4 +243,6 @@ Questions like this help us to get a better understanding of the data that we're
   <li><a href="https://kahliapinkins123.wixsite.com/kahliapinkins">Portfolio Website</a></li>
   <li>Email: kpinkin1@gmail.com</li>
 </ul>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
