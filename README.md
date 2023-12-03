@@ -1,6 +1,3 @@
-# sql-hospital-database
-
-<div id="top"></div>
 
 <!-- PROJECT LOGO -->
 <br />
@@ -11,7 +8,8 @@
   <p align="center">
     An SQL database that contains data on patients, nurses, hospital departments, diseases, medication, and billing. This code also contains SQL queries extracting specific and relevant data from our database.
     <br />
-    <a href="https://medium.com/@kpinkin1/a-comprehensive-guide-to-sql-for-beginners-creating-a-database-fc6f7205235e"><strong>React Blog Post »</strong></a>
+    <br />
+    <a href="https://medium.com/@kpinkin1/a-comprehensive-guide-to-sql-for-beginners-creating-a-database-fc6f7205235e"><strong>SQL Blog Post »</strong></a>
     <br />
     
     
@@ -22,77 +20,219 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      About The Project
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li>Built With</li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li>Exploring the Data</li>
+    <li>Contact Me</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-[![Anime Nook][anime-nook]](https://i.imgur.com/D3rjBFt.png)
 
+This is a Hospital Database built with SQL. It contains several tables with data related to hospital departments, nurses, patients, etc. Many of the tables relate to one another, creating a complex SQL schema. After creating the database, I explored the data using SQL queries that could provide interesting insights into hospital employee and patient trends. The SQL queries include simple to advanced SQL, ranging from Joins, Aggregates, Window Functions, and Subqueries. Listed below are the schema of all of the tables in the hospital database: 
 
-This is an application built with React that displays Anime Title Cards. It implements several funtions from React, most notably State, UseEffect, and Client Side Routing. Through the use of several components, I've created a user friendly and dynamic app with react. This application also includes a backend db.json that I created in order to work with fetch requests in my application.
+<h3>Patient</h3>
+<table>
+  <tr>
+    <th>Column Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>patient_id</td>
+    <td>Uniquely identifies each patient (Primary Key)</td> 
+  </tr>
+  <tr>
+    <td>first_name</td>
+    <td>First name of patient</td> 
+  </tr>
+  <tr>
+    <td>last_name</td>
+    <td>Last name of patient</td> 
+  </tr>
+  <tr>
+    <td>birthdate</td>
+    <td>Patient date of birth</td> 
+  </tr>
+  <tr>
+    <td>sex</td>
+    <td>Patient sex</td> 
+  </tr>
+  <tr>
+    <td>weight</td>
+    <td>Patient weight</td> 
+  </tr>
+  <tr>
+    <td>nurse_id</td>
+    <td>Nurse caring for patient (Foreign Key)</td> 
+  </tr>
+  <tr>
+    <td>department_id</td>
+    <td>Department caring for patient (Foreign Key)</td> 
+  </tr>
+  <tr>
+    <td>disease_id</td>
+    <td>Patient's disease</td> 
+  </tr>
+</table>
+
+<h3>Nurse</h3>
+<table>
+  <tr>
+    <th>Column Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>nurse_id</td>
+    <td>Uniquely identifies each nurse (Primary Key)</td> 
+  </tr>
+  <tr>
+    <td>first_name</td>
+    <td>First name of nurse</td> 
+  </tr>
+  <tr>
+    <td>last_name</td>
+    <td>Last name of nurse</td> 
+  </tr>
+  <tr>
+    <td>salary</td>
+    <td>Nurse salary</td> 
+  </tr>
+  <tr>
+    <td>department_id</td>
+    <td>Nurse's department (Foreign Key)</td> 
+  </tr>
+  <tr>
+  <tr>
+    <td>birthdate</td>
+    <td>Nurse date of birth</td> 
+  </tr>
+  <tr>
+    <td>sex</td>
+    <td>Nurse sex</td> 
+  </tr>
+</table>
+<h3>Department</h3>
+<table>
+  <tr>
+    <th>Column Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>department_id</td>
+    <td>Uniquely identifies each hospital department (Primary Key)</td> 
+  </tr>
+  <tr>
+    <td>department_name</td>
+    <td>Name of department</td> 
+  </tr>
+  <tr>
+    <td>head_id</td>
+    <td>Head Nurse of department (Foreign Key)</td> 
+  </tr>
+</table>
+
+<h3>Disease</h3>
+<table>
+  <tr>
+    <th>Column Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>disease_id</td>
+    <td>Uniquely identifies each disease (Primary Key)</td> 
+  </tr>
+  <tr>
+    <td>disease_name</td>
+    <td>Name of disease</td> 
+  </tr>
+</table>
+
+<h3>Bill</h3>
+<table>
+  <tr>
+    <th>Column Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>disease_id</td>
+    <td>Uniquely identifies disease for this bill (First Primary Key/ Foreign Key)</td> 
+  </tr>
+  <tr>
+    <td>department_id</td>
+    <td>Uniquely identifies department for this bill (Second Primary Key/ Foreign Key)</td> 
+  </tr>
+   <tr>
+    <td>total_bill</td>
+    <td>Bill amount</td> 
+  </tr>
+</table>
+
+<h3>Medication</h3>
+<table>
+  <tr>
+    <th>Column Name</th>
+    <th>Description</th> 
+  </tr>
+  <tr>
+    <td>disease_id</td>
+    <td>Uniquely identifies disease for this medication (First Primary Key/ Foreign Key)</td> 
+  </tr>
+  <tr>
+    <td>medication_name</td>
+    <td>Uniquely identifies medication name (Second Primary Key)</td> 
+  </tr>
+   <tr>
+    <td>dosage_mg</td>
+    <td>Daily medication dosage</td> 
+  </tr>
+</table>
+<div id="about-the-project"></div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ### Built With
 
-* [React.js](https://reactjs.org/)
+* MySQL
+* PopSQL
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- QUERY EXAMPLES -->
+## Exploring the Data
 
-This project has several functions all implemented with React: 
+After creating the database, I wanted to explore the data further to identify trends and extract important information. I did this using SQL queries. Some of the questions that are explored in this project are listed below : 
     <ol>
-        <li>Search animes</li>
-        <li>Like and Unlike an anime</li>
-        <li>Click for more information on an anime</li>
-        <li>Navigate to other pages</li>
-        <li>Sort by Alphabet or Rating</li>
-        <li>Submit a new anime</li>
+        <li>Which patients have cancer?</li>
+        <li>How many patients are being treated for COVID-19?</li>
+        <li>What is the average weight for patients who suffered a heart attack?</li>
+        <li>What are the common diseases for patients over 60?</li>
+        <li>What is the average salary of male nurses vs. the average salary of female nurse?</li>
+        <li>What is the average age of patients in each department?</li>
+        <li>Which patients under 18 have the flu?</li>
+        <li>How many milligrams of Ciprofloxacin will be admistered?</li>
+        <li>Which departments have the highest average bill?</li>
+        <li>Which nurses are treating patients with pneumonia?</li>
+        <li>Are there more females or males in Intensive Care?</li>
+        <li>What disease does the oldest patient in the hospital have?</li>
     </ol>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+Questions like this help us to get a better understanding of the data that we're working with and allow us identify trends and patterns for further analysis or to influence future decisions.
 
 
 <!-- CONTACT -->
-## Contact
+## Contact Me
+<ul>
+  <li><a href="https://www.linkedin.com/in/kahlia-pinkins-616599207/">LinkedIn</a></li>
+  <li><a href="https://kahliapinkins123.wixsite.com/kahliapinkins">Portfolio Website</a></li>
+  <li>Email: kpinkin1@gmail.com</li>
+</ul>
 
-Kahlia Pinkins - [@kahliapinkins](https://www.linkedin.com/in/kahlia-pinkins-616599207/) - kpinkin1@gmail.com
-
-Project Link: [https://github.com/kahliapinkins123/AnimeApp](https://github.com/kahliapinkins123/AnimeAppe)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-These are my sources!
-
-* [Deathnote](https://wall.alphacoders.com/by_sub_category.php?id=172992&name=Death+Note+Wallpapers)
-* [HunterXHunter](https://wall.alphacoders.com/by_sub_category.php?id=177860&name=Hunter+x+Hunter+Wallpapers)
-* [Demon Slayer](https://wall.alphacoders.com/by_sub_category.php?id=312213&name=Demon+Slayer%3A+Kimetsu+no+Yaiba+Wallpapers/)
-* [Brotherhood](https://wallpapersafari.com/fullmetal-alchemist-brotherhood-wallpaper-hd/)
-* [Parasyte](https://wallpapersafari.com/parasyte-the-maxim-wallpaper/)
-* [Header]( https://wallpaperaccess.com/awesome-cool-anime)
-* [NavBar CSS](https://www.w3schools.com/howto/howto_js_topnav.asp)
-* [Button CSS](https://www.w3schools.com/css/css3_buttons.asp)
-* [Form CSS](https://www.w3schools.com/css/css_form.asp)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
